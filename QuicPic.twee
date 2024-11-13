@@ -1,0 +1,27 @@
+:: StoryTitle {"position":"25,150"}
+QuicPic
+
+
+:: StoryData {"position":"225,150"}
+{
+  "ifid": "DA8E74E9-81F7-4DF5-A492-E0CF5F48CAC7",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Start {"position":"125,0"}
+<<script>>
+  const svars = State.variables;
+  const tvars = State.temporary
+  
+  svars.testVar = "Ben"
+<</script>>
+
+!This should be Ben, <<=$testVar.name>>
+<<link [[link|SC test]]>><</link>>
+
+
+:: SC test {"position":"200,300"}
